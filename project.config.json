@@ -1,0 +1,89 @@
+{
+	"description": "项目配置文件",
+	"cloudfunctionRoot": "cloudfunction/",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"autoAudits": false,
+		"coverView": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.9.2",
+	"appid": "wx1ea3c530c0559c7e",
+	"projectname": "HMH48",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"cloudfunctionTemplateRoot": "cloudfunctionTemplate",
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": 0,
+					"name": "馆藏",
+					"pathName": "pages/collection/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "剧情",
+					"pathName": "pages/story/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我的",
+					"pathName": "pages/user/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "抽一次",
+					"pathName": "pages/cardshow/index",
+					"query": "num=1",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "抽十次",
+					"pathName": "pages/cardshow/index",
+					"query": "num=10",
+					"scene": null
+				}
+			]
+		}
+	}
+}

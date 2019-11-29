@@ -1,0 +1,16 @@
+/**app.wxss**/
+
+page,view,text,swiper,image,swiper-item,navigator{
+  padding:0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/*主题颜色*/
+page{
+  --themeColor:#ff9999;
+  --bgColor:#fff4f4;
+ 
+}
+.image{
+  width:100%
+}

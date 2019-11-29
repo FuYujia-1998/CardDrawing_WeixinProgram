@@ -1,0 +1,48 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/collection/index",
+    "pages/story/index",
+    "pages/user/index",
+    "pages/cardshow/index",
+    "pages/onecard/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#FF9999",
+    "navigationBarTitleText": "HMH48",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#707070",
+    "selectedColor": "#FF9999",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "抽卡",
+        "iconPath": "icons/cards.png",
+        "selectedIconPath": "icons/cards_chose.png"
+      },
+      {
+        "pagePath": "pages/collection/index",
+        "text": "馆藏",
+        "iconPath": "icons/collection.png",
+        "selectedIconPath": "icons/collection_chose.png"
+      },
+      {
+        "pagePath": "pages/story/index",
+        "text": "剧情",
+        "iconPath": "icons/achievement.png",
+        "selectedIconPath": "icons/achievement_chose.png"
+      },
+      {
+        "pagePath": "pages/user/index",
+        "text": "我的",
+        "iconPath": "icons/user.png",
+        "selectedIconPath": "icons/user_chose.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
