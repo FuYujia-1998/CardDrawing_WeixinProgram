@@ -1,0 +1,43 @@
+<!--pages/collection/index.wxml-->
+<view class="root">
+  <!-- <image class='background-image' src='/bg/collection_bg.jpg' mode="aspectFill"></image> -->
+  <view class="content">
+     
+
+    <scroll-view  scroll-y class="left  ">
+     <view class="menuitem {{index===currentindex?'active':''}}" 
+     wx:for="{{menu}}"
+     wx:key="*this"
+     bindtap="handleitem"
+     data-index="{{index}}"
+     data-name="{{item}}"
+     >
+     {{item}}
+     </view>
+    </scroll-view>
+      
+    <scroll-view  scroll-y  scroll-top="{{scrolltop}}" class="right">
+      <view class="text">收藏进度：（{{card.length}}/{{curentcardnum}}）</view>
+
+      <view class="list">
+        <view class="carditem"
+          wx:for="{{card}}"
+          wx:key="{{item._id}}"
+          >
+         
+          
+            
+            <image class="image" lazy-load="true" mode="widthFix" bindload="load" bindtap="show2" data-index="{{index}}" src="{{item.src}}" ></image>
+         
+            <image class="loading" lazy-load="true" mode="widthFix" src="/icons/loading.gif" wx:if="{{loading[index]===1}}" ></image>
+            
+            
+
+             
+            <view class="number">已获得：{{item.num}}张</view>
+        </view>
+      </view>
+    </scroll-view>
+
+  </view>
+</view>

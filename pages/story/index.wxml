@@ -1,0 +1,8 @@
+<!--pages/achievement/index.wxml-->
+<view class="root">
+  <!-- <image class='background-image' src='/bg/story_bg.jpg' mode="aspectFill"></image> -->
+  <view class="content">
+  
+  </view>
+</view>
+

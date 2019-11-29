@@ -1,0 +1,148 @@
+/**index.wxss**/
+ 
+.root {
+   width: 100vw;
+    height: 100vh;
+    background-color: var(--bgColor);
+    position: relative;
+}
+
+.background-image{
+   height : 100%;
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+}
+.content{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+}
+.head{
+  margin-top:60rpx; 
+  width:100vw;
+  display: flex;
+  justify-content: space-around
+}
+.cardpool,.moneyset{
+  border: 4rpx solid var(--themeColor);
+  padding: 10rpx;
+  background-color: white;
+  width: 200rpx;
+  text-align: center;
+}
+.moneyset{
+display: flex;
+justify-content: center;
+align-items: center
+}
+.moneyimage,.costimg{
+  padding-right: 5rpx;
+  width:40rpx;
+}
+.refresh{
+  margin-left: 15rpx;
+  background-color: gray;
+  width:45rpx;
+  border-radius: 40rpx
+}
+.middle{
+  margin-top: 100rpx;
+  display: flex;
+  justify-content: center;
+  align-items:center; 
+}
+.bg_mini{
+  border: 4rpx solid var(--themeColor);
+  width: 80vw;
+}
+.bas{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 100rpx;
+}
+.left,.right{
+  display: fles;
+  flex-direction: column;
+  justify-content: center;
+  align-content: cener;
+}
+.costleft,.costright{
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+.btleft,.btright{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  border: 4rpx solid var(--themeColor);
+  padding: 10rpx;
+  width:220rpx;
+  height:100rpx;
+  border-radius: 16rpx;
+}
+.hover-class{
+  color: var(--themeColor)
+}
+.mask{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    z-index: 9000;
+    opacity: 0.7;
+}
+
+.modalDlg{
+    width: 580rpx;
+    height: 360rpx;
+    position: fixed;
+    top: 50%;
+    left: 0;
+    z-index: 9999;
+    margin: -180rpx 85rpx;
+    display: flex;
+    background-color: white;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15rpx;
+}
+.relateidcontainer{
+  display: flex;
+  width:540rpx;
+  height: 200rpx;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.tip{
+  text-align: center;
+  font-size: 50rpx;
+  
+}
+.owhatid{
+padding: 10rpx;
+ width: 400rpx;
+ border: 3rpx solid grey;
+ text-align: cente;
+ height: 60rpx;
+ 
+}
+.go{
+  border: 3rpx solid black;
+  border-radius: 15rpx;
+  margin-top: 30rpx;
+  padding: 10rpx;
+  width:160rpx;
+  text-align: center
+}

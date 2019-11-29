@@ -1,0 +1,22 @@
+<!--pages/user/index.wxml-->
+<view class="container">
+  <view class="up"> 
+    <view class="word">账号ID:</view>
+    <view class="number">{{owhatid}}</view>
+  </view>
+  <view class="middle"> 
+    <view class="word">总积分:</view>
+    <view class="number">{{chargemoney}}</view>
+    <image class="refresh" mode="widthFix" bindtap="refresh" src="/icons/Refresh.png"></image>
+  </view>
+  <view class="down">
+    <view class="tip">修改账号ID:</view>
+    
+    <view class="newidcontainer">
+      <input class="input" bindinput="ok"  type="number" placeholder="请输入新账号"></input>
+      <view class="go" bindtap="go" >确定</view>
+    </view>
+   
+    
+  </view>
+</view>
