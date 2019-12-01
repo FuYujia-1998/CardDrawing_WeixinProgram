@@ -1,10 +1,10 @@
-<!--index.wxml-->
+<!--pages/ssrgroup/index.wxml-->
 <view class="root">
   <!-- <image class='background-image' src='/bg/index_bg.jpg' mode="aspectFill"></image> -->
   <view class="content">
 
     <view class="head">
-      <view class="moneyset" bindtap="change">切换卡池</view>
+      <view class="moneyset" bindtap="rule">规则说明</view>
       <view class="moneyset">
         <image class="moneyimage" mode="widthFix" src="/icons/diamond.png"></image>
         <view class="moneynumber">{{presentmoney}}</view>
@@ -15,7 +15,13 @@
     </view> 
 
     <view class="middle">
-     <image class="bg_mini" mode="widthFix" src="/bg/index_bgmini.png"></image>
+     <image class="bg_mini" mode="widthFix" bindload="load"  src="{{src}}" style="display:none" ></image>
+            <view class="loadcontainer" wx:if="{{loading}}" >
+            <image class="loading" mode="widthFix" src="/icons/loading.gif"  ></image>
+            </view>
+     <image class="bg_mini" mode="widthFix" src="{{src}}"wx:else>
+     
+     </image>
     </view>
 
     <view class="bas">
@@ -31,7 +37,7 @@
       <view class="right">
         <view class="btright" hover-class="hover-class" bindtap="chouten">
           <view class="bttext" >抽十次</view>
-          <view class="bttext">（必得sr）</view>
+          <!-- <view class="bttext">（必得sr）</view> -->
         </view>
         <view class="costright">
             <image class="costimg" mode="widthFix" src="/icons/diamond.png"></image>
@@ -40,22 +46,8 @@
         </view>
     </view>
 
-    <view class="mask" catchtouchmove="preventTouchMove" wx:if="{{showModal1||showModal2}}"></view>
-    <view class="modalDlg" wx:if="{{showModal1}}">
-      <view class="relateidcontainer">
-        <view class="tip">请设置账号ID</view>
-        <input class="owhatid" placeholder="请输入owhatid" bindinput="ok" type="number"></input>
-      </view>
-      <view class="go" bindtap="go" >确定</view>
-    </view>
-
-    <view class="modalDlg" wx:if="{{showModal2}}">
-      <view class="relateidcontainer">
-        <view class="onegroup" bindtap="onegroup">限定馆藏专属卡池</view>
-        <view class="ssrgroup" bindtap="ssrgroup">ssr，sr限定卡池</view>
-      </view>
-      <view class="go" bindtap="go2" >取消</view>
-    </view>
+    
+    
 
   </view>
 </view>

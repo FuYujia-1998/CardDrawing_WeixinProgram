@@ -35,6 +35,7 @@ Page({
     })
 
     this.card= wx.getStorageSync('mycard')
+
     let newcard
     if (this.data.currentindex == 0) {
       newcard = this.card

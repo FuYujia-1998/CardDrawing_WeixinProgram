@@ -56,9 +56,8 @@
   width: 80%
 }
 .loading{
-  width:25%;
- position: relative;
- top:-250rpx
+  width:35%;
+  
 }
 
 .number{
@@ -67,4 +66,12 @@
 .text{
   text-align: center;
   margin: 20rpx;
+}
+.loadcontainer{
+  margin-left: 25rpx;
+  height: 344rpx;
+  width:80%;
+  display: flex;
+  justify-content: center;
+  align-items: center
 }

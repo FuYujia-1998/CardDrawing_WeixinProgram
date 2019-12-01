@@ -8,8 +8,7 @@ page,view,text,swiper,image,swiper-item,navigator{
 /*主题颜色*/
 page{
   --themeColor:#ff9999;
-  --bgColor:#fff4f4;
- 
+  --bgColor:#fff7f7;
 }
 .image{
   width:100%

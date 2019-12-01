@@ -70,17 +70,45 @@
 					"scene": null
 				},
 				{
-					"id": -1,
+					"id": 3,
 					"name": "抽一次",
 					"pathName": "pages/cardshow/index",
-					"query": "num=1",
+					"query": "num=1&type=0",
+					"scene": null
+				},
+				{
+					"id": 4,
+					"name": "抽十次",
+					"pathName": "pages/cardshow/index",
+					"query": "num=10&type=0",
 					"scene": null
 				},
 				{
 					"id": -1,
-					"name": "抽十次",
+					"name": "具体剧情",
+					"pathName": "pages/onestory/index",
+					"query": "name1=昊昊&name2=chili",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "馆藏专属抽卡",
+					"pathName": "pages/onegroup/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 7,
+					"name": "限定卡池抽一次",
 					"pathName": "pages/cardshow/index",
-					"query": "num=10",
+					"query": "num=1&type=1&name1=昊昊&name2=chili",
+					"scene": null
+				},
+				{
+					"id": 8,
+					"name": "ssr限定卡池",
+					"pathName": "pages/ssrgroup/index",
+					"query": "",
 					"scene": null
 				}
 			]

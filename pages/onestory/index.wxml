@@ -1,0 +1,119 @@
+<!--pages/onestory/index.wxml-->
+<view class="root">
+  <!-- <image class='background-image' src='/bg/story_bg.jpg' mode="aspectFill"></image> -->
+  <view class="content">
+
+  <view class="top">
+    
+    <view class="line1">
+      
+      <view class="text">收集进度：</view>
+      <view class="text">SSR : {{rank.myssr}}/{{rank.totalssr}}</view>
+      <view class="text">SR : {{rank.mysr}}/{{rank.totalsr}}</view>
+      <view class="text">R : {{rank.myr}}/{{rank.totalr}}</view>
+    </view>
+    <view class="line2">
+      <image class="question" bindtap="question"src="/icons/question.png" mode="widthFix"></image>
+       <progress class="progress" show-info="true"percent="{{percent}}" stroke-width="20" color="#ff9999"></progress>
+      
+    </view>
+  </view>
+
+  <view class="middle">
+    <scroll-view scroll-x="true" class="storycontainer">
+
+      <view class="storylist">
+        <view class="storyitem" 
+        wx:for="{{story}}"
+        wx:key="{{item.no}}"
+        bindtap="handleitem"
+        data-name1="{{item.src}}"
+        >
+          <view class="cardcontainer">
+          <view class="hide" wx:if="{{!finish[index]}}">
+            
+            <image class="icon_lock" src="/icons/Lock.png" mode="widthFix"></image>
+            <view class="rule">本馆集卡进度达到{{index*25+25}}%后可解锁剧情{{index+1}}</view>
+          </view>
+          
+            <image class="image" lazy-load="true" mode="widthFix" bindload="load3" data-index="{{index}}"  src="{{item.src}}" style="display:none" ></image>
+            <view class="loadcontainer" wx:if="{{finish[index]&&(loading3[index]===1)}}" >
+            <image class="loading" lazy-load="true" mode="widthFix" src="/icons/loading.gif"  ></image>
+            </view>
+
+              <image class="image" src="{{item.src}}"  mode="widthFix" wx:if="{{finish[index]&&(loading3[index]===0)}}" ></image>
+             
+            
+            
+          <view class="title">{{item.title}}</view>
+          </view>
+
+        </view>
+      </view>
+      
+
+    </scroll-view>
+  </view>
+  <view class="bottom">
+    
+
+    <view class="cardpool" bindtap="show">查看本馆卡牌</view>
+    
+  </view>
+
+  <view class="mask" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+  <view class="modalDlg" wx:if="{{showModal}}">
+    
+    <scroll-view  scroll-y="true" class="showcard">
+      <view class="text">已获得卡牌</view>
+
+      <view class="list">
+        <view class="carditem"
+          wx:for="{{card_get}}"
+          wx:key="{{item._id}}"
+          >
+             
+            
+            
+            <image class="loading"  mode="widthFix" src="/icons/loading.gif" wx:if="{{loading1[index]===1}}" ></image>
+            
+            <image class="image" bindtap="preview" bindload="load1" mode="widthFix"data-index="{{index}}" data-src="{{item.src}}"  src="{{item.src}}"  ></image>
+           
+            
+            
+            
+            
+
+             
+            
+        </view>
+      </view>
+
+      <view class="text">未获得卡牌</view>
+
+      <view class="list">
+        <view class="carditem"
+          wx:for="{{card_notget}}"
+          wx:key="{{item._id}}"
+          >
+            
+            
+           
+            <image class="loading"  mode="widthFix" src="/icons/loading.gif" wx:if="{{loading1[index]===1}}"  ></image>
+           
+            <image class="image2" mode="widthFix" bindtap="notget" data-index="{{index}}" bindload="load2" src="{{item.src}}" ></image>
+            
+            
+
+             
+            
+        </view>
+      </view>
+
+    </scroll-view>
+    
+    <view class="go" bindtap="go">确定</view>
+  </view>
+
+  </view>
+</view>

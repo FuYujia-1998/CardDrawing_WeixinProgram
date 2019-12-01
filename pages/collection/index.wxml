@@ -27,9 +27,11 @@
          
           
             
-            <image class="image" lazy-load="true" mode="widthFix" bindload="load" bindtap="show2" data-index="{{index}}" src="{{item.src}}" ></image>
-         
-            <image class="loading" lazy-load="true" mode="widthFix" src="/icons/loading.gif" wx:if="{{loading[index]===1}}" ></image>
+            <image class="image" lazy-load="true" mode="widthFix" bindload="load" bindtap="show2" data-index="{{index}}" src="{{item.src}}" style="display:none" ></image>
+            <view class="loadcontainer" wx:if="{{loading[index]===1}}" >
+            <image class="loading" lazy-load="true" mode="widthFix" src="/icons/loading.gif"  ></image>
+            </view>
+            <image class="image" lazy-load="true" mode="widthFix"  bindtap="show2" data-index="{{index}}" src="{{item.src}}" wx:else ></image>
             
             
 

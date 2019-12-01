@@ -4,7 +4,7 @@
   <view class="content">
   
    <view class="onecontainer" wx:if="{{onecard}}">
-    <image animation="{{animationData[1]}}"  bindtap="show1" class="onecard" src="{{src}}" mode="widthFix"></image>
+    <image animation="{{animationData[1]}}" bindload="load" bindtap="show1" class="onecard" src="{{src}}" mode="widthFix"></image>
    </view>
 
    <view class="tencontainer" wx:if="{{tencard}}">
@@ -14,10 +14,11 @@
      wx:key="{{item._id}}"
     >
     <image animation="{{animationData[index]}}"  bindtap="show2"  
-     data-index="{{index}}" class="tencard" src="{{src[index]}}" mode="widthFix"></image>
+     data-index="{{index}}" class="tencard" bindload="load"src="{{src[index]}}" mode="widthFix"></image>
 
     </view>
    </view>
+   <view class="showonce" bindtap="showonce" wx:if="{{finish}}">一键翻牌</view>
   
   </view>
 

@@ -21,3 +21,35 @@
     left: 0px;
     top: 0px;
 }
+.list{
+  margin-top: 40rpx;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center
+}
+.charactorgroupe{
+  background-color: var(--bgColor)
+}
+
+.menuitem{
+  background-color: #FEFCF0;
+  border: 12rpx solid var(--themeColor);
+  padding: 20rpx;
+  width: 70%;
+  margin-top:30rpx;
+  margin-bottom: 30rpx;
+  border-radius: 80rpx;
+  font-size: 40rpx;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+.news{
+  width:65rpx;
+  margin-left: 15rpx
+}
+.image{
+  width:210rpx
+}

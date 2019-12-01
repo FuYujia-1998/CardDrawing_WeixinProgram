@@ -63,6 +63,7 @@
     background: #000;
     z-index: 9000;
     opacity: 0.7;
+  
 }
 
 .modalDlg{
@@ -89,4 +90,13 @@
   padding: 10rpx;
   width:160rpx;
   text-align: center
+}
+.showonce{
+ position: absolute;
+ left:40rpx;
+ bottom:80rpx;
+ padding: 20rpx;
+ font-size: 35rpx;
+ border: 4rpx solid var(--themeColor);
+ background-color: white;
 }

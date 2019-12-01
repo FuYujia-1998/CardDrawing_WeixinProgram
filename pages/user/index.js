@@ -70,7 +70,10 @@ Page({
     var mypresentmoney = wx.getStorageSync('presentmomney')
     var mychargemoney = wx.getStorageSync('chargemoney')
     let _id = wx.getStorageSync("_id")
-    db.collection('user').doc(_id).get().then(res => {
+    db.collection('user').doc(_id).field({
+      presentmoney: true,
+      chargemoney: true
+    }).get().then(res => {
      
       console.log(res)
       this.setData({

@@ -2,7 +2,26 @@
 <view class="root">
   <!-- <image class='background-image' src='/bg/story_bg.jpg' mode="aspectFill"></image> -->
   <view class="content">
-  
+   <scroll-view  scroll-y class="charactorgroupe">
+      <view class="list">
+
+        <view class="menuitem" 
+        wx:for="{{menu}}"
+        wx:key="*this"
+        bindtap="handleitem"
+        data-index="{{index}}"
+        data-name1="{{item[0]}}"
+        data-name2="{{item[1]}}"
+        >
+        {{item[0]}}{{item[1]?' & ':''}}{{item[1]}}
+        
+        <image class="news"  mode="widthFix"src="/icons/news.png" wx:if="{{news[index]}}"></image>
+        
+        </view>
+      
+      </view>
+     
+    </scroll-view>
   </view>
 </view>
 

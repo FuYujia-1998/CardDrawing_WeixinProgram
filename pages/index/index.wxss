@@ -20,19 +20,27 @@
     height: 100%;
     left: 0px;
     top: 0px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center
 }
 .head{
-  margin-top:60rpx; 
-  width:100vw;
+  flex: 1;
+  width:86vw;
   display: flex;
-  justify-content: space-around
+  justify-content: space-between;
+  align-items: center
 }
-.cardpool,.moneyset{
+.moneyset{
   border: 4rpx solid var(--themeColor);
   padding: 10rpx;
   background-color: white;
   width: 200rpx;
   text-align: center;
+  height: 100rpx;
+  margin-top: 60rpx
 }
 .moneyset{
 display: flex;
@@ -50,7 +58,8 @@ align-items: center
   border-radius: 40rpx
 }
 .middle{
-  margin-top: 100rpx;
+  flex: 5;
+  
   display: flex;
   justify-content: center;
   align-items:center; 
@@ -60,10 +69,12 @@ align-items: center
   width: 80vw;
 }
 .bas{
+  width: 100vw;
+  flex: 1;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin-top: 100rpx;
+  margin-bottom: 50rpx
 }
 .left,.right{
   display: fles;
@@ -146,3 +157,12 @@ padding: 10rpx;
   width:160rpx;
   text-align: center
 }
+.onegroup,.ssrgroup{
+  border: 4rpx solid var(--themeColor);
+  font-size: 36rpx;
+  margin-top: 30rpx;
+  padding: 10rpx;
+  width:350rpx;
+  text-align: center
+}
+

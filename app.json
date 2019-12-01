@@ -5,7 +5,10 @@
     "pages/story/index",
     "pages/user/index",
     "pages/cardshow/index",
-    "pages/onecard/index"
+    "pages/onecard/index",
+    "pages/onestory/index",
+     "pages/onegroup/index",
+     "pages/ssrgroup/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
