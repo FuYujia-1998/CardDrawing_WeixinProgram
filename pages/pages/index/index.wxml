@@ -1,0 +1,66 @@
+<!--index.wxml-->
+<view class="root">
+  
+  <image class='background-image' src='/bg/bg.jpg' mode="aspectFill"></image>
+  <view class="content">
+
+    <view class="head">
+      
+      <image class="question" bindtap="question" src="/icons/question.png" mode="widthFix"></image>
+      <view class="right">
+        <view class="moneyset">
+          <image class="moneysetimage" src="/icons/moneyset.png" mode="widthFix"></image>
+          <view class="moneynumber">{{presentmoney}}</view>
+          <image class="refresh" mode="widthFix" bindtap="refresh" src="/icons/Refresh.png"></image>
+        </view>
+        <view class="ad" bindtap="ad">看视频得1钻({{ad}}/10)</view>
+        
+      </view>
+
+
+    </view> 
+
+    <view class="middle">
+   
+    <view class="linetwo">
+      <image class="leftgroup" bindtap="ssrgroup" mode="widthFix" src="/icons/left.png"></image>
+      <image class="middlegroup" src="http://i1.fuimg.com/636741/00c2dbb9f97d5157.png" mode="widthFix"></image>
+      <image class="rightgroup" bindtap="onegroup"mode="widthFix" src="/icons/right.png"></image>
+    </view>
+    </view>
+
+    <view class="bas">
+      <view class="left">
+        <image class="btleft" bindtap="chouone" mode="widthFix" src="{{free?'/icons/freecard.png':'/icons/onecard.png'}}"></image>
+        <view class="cost">
+          <image class="costimg"  mode="widthFix" src="/icons/diamond.png"></image>
+          <view class="costnum">{{onecost}}</view>
+        </view>
+      </view>
+      <view class="right">
+       
+         <image class="btright" bindtap="chouten" mode="widthFix" src="/icons/tencard.png"></image>
+        <view class="costright">
+            <view class="cost">
+            <image class="costimg" mode="widthFix" src="/icons/diamond.png"></image>
+            <view class="costnum">{{10*onecost}}</view>
+            </view>
+            </view>
+        </view>
+    </view>
+   
+
+    <view class="mask" catchtouchmove="preventTouchMove" wx:if="{{showModal1}}"></view>
+    <view class="mask2" catchtouchmove="preventTouchMove" wx:if="{{showModal2}}"></view>
+    <view class="modalDlg" wx:if="{{showModal1}}">
+      <view class="relateidcontainer">
+        <view class="tip">请设置账号ID</view>
+        <input class="owhatid" placeholder="请输入id" bindinput="ok" type="number"></input>
+      </view>
+      <view class="go" bindtap="go" >确定</view>
+    </view>
+
+   
+
+  </view>
+</view>

@@ -1,0 +1,120 @@
+/* pages/oengroup/index.wxss */
+.root {
+   width: 100vw;
+    height: 100vh;
+    background-color: var(--bgColor);
+    position: relative;
+}
+
+.background-image{
+   height : 100%;
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+}
+.content{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center
+}
+.head{
+  flex: 1;
+  width:86vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center
+}
+.moneyset{
+  
+  margin-top: 60rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.moneynumber{
+ 
+ margin-left: -110rpx;
+ margin-right: 30rpx
+}
+.moneysetimage{
+  width:200rpx;
+}
+.question{
+ width: 256rpx;
+ margin-top: 60rpx
+}
+.moneyimage,.costimg{
+  padding-right: 5rpx;
+  width:55rpx;
+}
+.refresh{
+  
+  margin-top: 10rpx;
+  width:50rpx;
+  
+
+}
+.middle{
+  flex: 5;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items:center; 
+}
+.bg_mini{
+  border: 4rpx solid var(--themeColor);
+  width: 95vw;
+}
+.bas{
+  width: 100vw;
+  flex: 1;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 50rpx
+}
+.left,.right{
+  display: fles;
+  flex-direction: column;
+  justify-content: center;
+  align-content: cener;
+}
+.cost{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -20rpx
+}
+.btleft,.btright{
+  width:300rpx;
+}
+.loading{
+  width:80rpx;
+  
+}
+.loadcontainer{
+  width: 600rpx;
+  height: 600rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 4rpx solid var(--themeColor);
+}
+.mask{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9000;
+}

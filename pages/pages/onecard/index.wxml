@@ -1,0 +1,12 @@
+<!--pages/onecard/index.wxml-->
+<view class="root">
+  <image class='background-image' src='http://i2.tiimg.com/636741/cbbf3771dfbe2f62.jpg' mode="aspectFill"></image>
+  <view class="content">
+
+    <view class="onecontainer" >
+    <image  class="onecard" bindload="load" bindtap="preview" src="{{src}}" mode="widthFix"></image>
+    <view class='onenum'>已获得：{{num}}张</view>
+   </view>
+
+  </view>
+</view>

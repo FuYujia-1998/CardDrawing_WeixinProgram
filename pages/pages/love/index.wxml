@@ -1,0 +1,122 @@
+<!--pages/love/index.wxml-->
+<view class="root">
+  <image class='background-image' src='{{src}}' mode="aspectFill"></image>
+ <view class="content">
+  <view class="top">
+    <view class="left">
+
+     <view class="line1">
+     <view class="jiban">羁绊：</view>
+     <progress class="progress"percent="{{progress}}" stroke-width="20" color="{{progress>=100?'#FF4444':'#A1E876'}}"></progress>
+     <view class="jiban">{{progress}}</view>
+     </view>
+
+     <view class="line2">
+     <view class="rank">等级：{{title}}</view>
+     <view class="call">你的称呼：{{call}}</view>
+     
+     </view>
+     
+    </view>
+
+    <view class="right">
+     <view class="button" bindtap="hudong">互动</view>
+     <view class="button"  bindtap="diary">历史</view>
+     <view class="button"  bindtap="call">称呼</view>
+     <view class="button"  bindtap="bg">背景</view>
+     <view class="button"  bindtap="question">规则</view>
+    </view>
+  </view>
+  <view class="middle">
+  </view>
+  <view class="bottom">
+  <view class="name">{{name}}</view>
+   <view class="text"> {{diary[0].no?'':call+', '}}{{text}}</view>
+  </view>
+ 
+ <view class="mask" catchtouchmove="preventTouchMove" wx:if="{{showmodal}}"></view>
+  
+
+    <view class="modalcall" wx:if="{{modalcall}}"> 
+    <view class="changecall">修改{{name}}对你的称呼：</view>
+    <input class="inputcall"  bindinput="inputcall" placeholder="请输入新称呼"></input>
+      <view class="yesorno">
+     <view class="go" bindtap="gocall">确定</view>
+     <view class="go" bindtap="cancel">取消</view>
+     </view>
+   </view>
+
+   
+    <view class="modalbg" wx:if="{{modalbg}}"> 
+     <view >选择背景</view>
+      <scroll-view  scroll-y="true" class="showcard">
+      
+
+      <view class="list">
+        <view class="carditem"
+          wx:for="{{cardlist}}"
+          wx:key="{{item._id}}"
+          >
+            
+            <image class="loading {{index===currentindex?'active':''}}"  mode="widthFix" src="/icons/loading.gif" wx:if="{{loading1[index]===1}}" ></image>
+            
+            <image class="image {{index===currentindex?'active':''}}" bindtap="tapbg" bindload="load" mode="widthFix"data-index="{{index}}" data-src="{{item.src}}"  src="{{item.src}}"  ></image>
+            
+        </view>
+      </view>
+
+
+    </scroll-view>
+     <view class="yesorno">
+     <view class="go" bindtap="gobg">确定</view>
+     <view class="go" bindtap="cancel">取消</view>
+     </view>
+     
+   </view>
+
+  <view class="modalhudong" wx:if="{{modalhudong}}"> 
+     <scroll-view  scroll-y="true" class="showcard3">
+        <view class="hudongcontainer">
+        <view class="hudongitem"
+          wx:for="{{hudong}}"
+          wx:key="{{hudong.hudong}}"
+        >
+        <view class="hudong" bindtap="taphudong" data-index="{{index}}">{{item.hudong}} 消耗{{item.cost}}张{{item.rank}}卡</view>
+        </view>
+      </view>
+      </scroll-view>
+     
+     <view>定制互动</view>
+     <input class="inputhudong" bindinput="inputhudong" ></input>
+     <view class="yesorno">
+     <view class="go" bindtap="gohudong">确定</view>
+     <view class="go" bindtap="cancel">取消</view>
+     </view>
+   </view>
+
+    <view class="modaldiary" wx:if="{{modaldiary}}">
+    <view class="diarytitle">历史</view> 
+      <scroll-view  scroll-y="true" class="showcard2">
+        <view class="diarycontainer">
+        <view class="diaryitem"
+          wx:for="{{diary}}"
+          wx:key="{{diary.date}}"
+          >
+          <view class="diarytext">************************************</view>
+          <view class="diarytext">{{item.date}}</view>
+          <view class="diarytext">{{item.story}}</view>
+          <view class="diarytext">{{item.context}}</view>
+          <view class="diarytext">{{name}}  “{{item.no?'':call+', '}}{{item.sentence}}”</view>
+          <view class="diaryconclusion" wx:if="{{item.hidden}}">*触发隐藏剧情: {{item.hidden}}</view>
+          <view class="diaryconclusion">♥{{item.conclusion}}</view>
+          
+        </view>
+      </view>
+      </scroll-view>
+      <view class="yesorno">
+     <view class="go" bindtap="cancel">确定</view>
+     </view>
+   </view>
+
+ </view>
+</view>

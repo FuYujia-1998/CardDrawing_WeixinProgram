@@ -1,0 +1,32 @@
+<!--pages/achievement/index.wxml-->
+<view class="root">
+  <!-- <image class='background-image' src='cloud://hmh48-j2coo.686d-hmh48-j2coo-1300630698/background/index_bg.jpg' mode="aspectFill"></image> -->
+  <view class="content">
+  <ad unit-id="adunit-0ea8e49b63ecc41c"></ad>
+   <scroll-view  scroll-y class="charactorgroupe">
+      <view class="menuitem" wx:if="{{!login}}">请前往“我的”页面登录</view>
+      <view class="list" wx:if="{{login}}">
+
+        <view class="menuitem" 
+        wx:for="{{menu}}"
+        wx:key="*this"
+        bindtap="handleitem"
+        data-index="{{index}}"
+        >
+          <view class="up">
+            <view>{{item}}</view>
+            <image class="news"  mode="widthFix"src="/icons/news.png" wx:if="{{news[index]}}"></image>
+          </view>
+
+          <view class="down">
+            <progress class="progress"show-info="true"percent="{{progress[index]}}" stroke-width="20" color="#ff9999"></progress>
+          </view>
+
+        </view>
+      
+      </view>
+     
+    </scroll-view>
+  </view>
+</view>
+

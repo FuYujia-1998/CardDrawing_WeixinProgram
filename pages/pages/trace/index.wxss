@@ -1,0 +1,38 @@
+/* pages/trace/index.wxss */
+.list{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 30rpx;
+}
+.item{
+ width:50%;
+ display: flex;
+ justify-content: center
+}
+.container{
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+ width: 40vw;
+ margin-top:20rpx;
+ margin-bottom: 20rpx;
+ display: flex;
+ flex-direction: column;
+ justify-content: space-around;
+ align-items: center;
+ background-color: #FEFCF0;
+  box-shadow: 10rpx 14rpx 9rpx gainsboro;
+  border: 4rpx solid var(--themeColor)
+}
+
+.progress{
+ 
+  width:20vw;
+  padding-left: 10rpx;
+  padding-right: 10rpx;
+
+}
+.jibanset{
+  margin-top: 10rpx;
+  display: flex;
+  align-content: center
+}

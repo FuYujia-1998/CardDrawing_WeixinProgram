@@ -1,0 +1,42 @@
+<!--pages/cardshow/index.wxml-->
+<view class="root">
+  <image class='background-image' src='http://i2.tiimg.com/636741/cbbf3771dfbe2f62.jpg' mode="aspectFill"></image>
+  <view class="content">
+  
+   <view class="onecontainer" wx:if="{{onecard}}">
+    <image animation="{{animationData[1]}}" bindload="load" bindtap="show1" class="onecard {{onecardnew?'oneactive':''}}" src="{{src}}" mode="widthFix"></image>
+    <image class="onecardnew" mode="widthFix" src="/icons/newcard.png" wx:if="{{onecardnew}}" ></image>
+   </view>
+
+   <view class="tencontainer" wx:if="{{tencard}}">
+   
+    <view class="tenlist"
+    wx:for="{{randcard}}"
+     wx:key="{{item._id}}"
+    >
+    <image animation="{{animationData[index]}}"  bindtap="show2"  
+     data-index="{{index}}" class="tencard {{tencardnew[index]?'tenactive':''}}" bindload="load"src="{{src[index]}}" mode="widthFix"></image>
+     <image class="tencardnew" mode="widthFix" src="/icons/newcard.png" wx:if="{{tencardnew[index]}}" ></image>
+    </view>
+   </view>
+   <view class="showonce" bindtap="showonce" wx:if="{{finish}}">一键翻牌</view>
+   <button class='btn-default' size="mini" open-type='share' wx:if="{{finish}}">分享</button>
+  
+  </view>
+
+  <view class="mask" catchtouchmove="preventTouchMove" wx:if="{{showModal1}}"></view>
+
+  <view class="modalDlg" wx:if="{{showModal1}}">
+    <image class="showcard" bindtap="preview" mode="widthFix"src="{{currentsrc}}" bindload="load" ></image>
+    <view class="go" bindtap="go">确定</view>
+    <button class='btn-default2' size="mini" open-type='share' wx:if="{{finish}}">分享</button>
+  </view>
+  
+
+
+
+
+
+
+
+</view>

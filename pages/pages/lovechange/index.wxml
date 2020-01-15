@@ -1,0 +1,61 @@
+<!--pages/lovechange/index.wxml-->
+<view class="top">
+
+    <view class="lineone">
+      <view >已选择：</view>
+      <view class="rank">R {{rank[2]}} 张</view>
+      <view class="rank">SR {{rank[1]}} 张</view>
+      <view class="rank">SSR {{rank[0]}} 张</view>
+    </view>
+
+    <view class="linetwo">
+      <view class="left">
+        <view class="hudong">{{hudong}}： 消耗 {{cost}} 张 {{costrank}} 卡</view>
+        <view class="jiban">可提升： {{jiban}} 点羁绊</view>
+      </view>
+      <view class="right">
+        <view class="text">*2 张 R 提升 1 点羁绊</view>
+        <view class="text">*1 张 SR 提升 5 点羁绊</view>
+        <view class="text">*1 张 SSR 提升 10 点羁绊</view>
+      </view>
+    </view>
+    
+  </view>
+
+  <view class="middle">
+    <scroll-view  clsaa="scrollview" style="height: 71vh;" scroll-y="true" >
+      <view class="list">
+          <view class="carditem"
+            wx:for="{{card}}"
+            wx:key="{{item._id}}"
+            >
+    
+              
+              <image class="image" lazy-load="true" mode="widthFix" bindload="load" data-index="{{index}}" src="{{item.src}}" style="display:none" ></image>
+              <view class="loadcontainer" wx:if="{{loading[index]===1}}" >
+              <image class="loading" lazy-load="true" mode="widthFix" src="/icons/loading.gif"  ></image>
+              </view>
+              <image class="image" lazy-load="true" mode="widthFix"  src="{{item.src}}" wx:else ></image>
+              
+              
+
+              <view class="chosen">
+                <image class="minus" bindtap="minus" mode="widthFix" data-index="{{index}}" src="/icons/minus.png"></image>
+                <view>{{chosen[index]}}/{{item.num}}</view>
+                <image class="plus" bindtap="plus" mode="widthFix" data-index="{{index}}" src="/icons/pluspink.png"></image>
+              </view>
+              
+          </view>
+        </view>
+    </scroll-view>
+  </view>
+
+  <view class="bottom">
+    <checkbox-group bindchange="checkboxChange">
+ 
+    <checkbox value="all">一键勾选重复卡牌</checkbox>
+  
+</checkbox-group>
+    <view class="sure" bindtap="sure">兑换</view>
+    
+  </view>

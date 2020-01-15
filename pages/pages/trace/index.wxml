@@ -1,0 +1,21 @@
+<!--pages/trace/index.wxml-->
+<ad unit-id="adunit-0ea8e49b63ecc41c"></ad>
+<scroll-view scroll-y>
+<view class="list">
+         <view class="item"
+          wx:for="{{item}}"
+          wx:key="*this"
+          
+          >
+           <view class="container" bindtap="go" data-item="{{item}}">
+           <view class="name"> {{item}}: {{love[item].title}}</view>
+           <view class="jibanset">
+          <view class="name">羁绊:</view>
+          <progress class="progress"percent="{{love[item].progress}}" stroke-width="15" color="#ff9999"></progress>
+          <view class="name">{{love[item].progress}}</view>
+          </view>
+          </view>
+          </view>
+        
+</view>
+</scroll-view>

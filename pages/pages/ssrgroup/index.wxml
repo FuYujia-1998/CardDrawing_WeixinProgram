@@ -1,0 +1,45 @@
+<!--pages/ssrgroup/index.wxml-->
+<view class="root">
+  <image class='background-image' src='/bg/bg.jpg' mode="aspectFill"></image>
+  <view class="content">
+
+    <view class="head">
+      <image class="question" bindtap="rule" src="/icons/question.png" mode="widthFix"></image>
+      <view class="moneyset">
+        <image class="moneyimage" mode="widthFix" src="/icons/ticket.png"></image>
+        <view class="moneynumber">{{ticket}}</view>
+        <image class="change" mode="widthFix" bindtap="change" src="/icons/plus.png"></image>
+      </view>
+
+
+    </view> 
+
+    <view class="middle">
+     <image class="bg_mini" mode="widthFix" bindload="load"  src="http://i1.fuimg.com/636741/a3bbd7963d49fa04.png" style="display:none" ></image>
+            <view class="loadcontainer" wx:if="{{loading}}" >
+            <image class="loading" mode="widthFix" src="/icons/loading.gif"  ></image>
+            </view>
+     <image class="bg_mini" mode="widthFix" src="http://i1.fuimg.com/636741/a3bbd7963d49fa04.png"wx:else>
+     
+     </image>
+    </view>
+
+    <view class="bas">
+      
+       <view class="left">
+   
+        <image class="btleft" bindtap="chouone" mode="widthFix" src="/icons/onecard.png"></image>
+
+        <view class="costleft">
+          <image class="costimg"  mode="widthFix" src="/icons/ticket.png"></image>
+          <view class="costnum">5</view>
+        </view>
+      </view>
+      
+    </view>
+
+    
+     <view class="mask" catchtouchmove="preventTouchMove" wx:if="{{showModal1}}"></view>
+
+  </view>
+</view>

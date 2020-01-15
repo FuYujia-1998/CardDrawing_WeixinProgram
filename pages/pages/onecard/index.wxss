@@ -1,0 +1,46 @@
+/* pages/onecard/index.wxss */
+
+.root {
+   width: 100vw;
+    height: 100vh;
+    background-color: var(--bgColor);
+    position: relative;
+}
+
+.background-image{
+   height : 100%;
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+}
+.content{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+}
+.onecontainer{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.onecard{
+  width:70vw;
+}
+.onenum{
+  margin-top: 70rpx;
+  background-color: white;
+  border: 4rpx solid var(--themeColor);
+  color: var(--themeColor);
+  border-radius: 8rpx;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  padding-top: 15rpx;
+  padding-bottom: 15rpx;
+
+}

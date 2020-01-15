@@ -1,0 +1,20 @@
+<!--pages/startstory/index.wxml-->
+<view class="root">
+  <image class='background-image' src="{{src}}" mode="aspectFill"></image>
+  <view class="content">
+    <view class="top"></view>
+    <view class="middle">
+      <view class="name2" wx:if="{{type==1}}">我</view>
+      <view class="name" wx:if="{{type==3}}">{{member[1]}}</view>
+      <view class="name" wx:if="{{type==2}}">{{member[0]}}</view>
+      <view class="name2" wx:if="{{type==4}}">你</view>
+     
+      <view class="text">{{text}}</view>
+    </view>
+    <view class="down">
+      <view class="next" bindtap="next">{{finish}}</view>
+    </view>
+  
+  <button class='btn-default' size="mini" open-type='share' wx:if="{{finish}}">分享</button>
+  </view>
+</view>

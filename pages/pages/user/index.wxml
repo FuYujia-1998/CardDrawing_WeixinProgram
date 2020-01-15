@@ -1,0 +1,44 @@
+<!--pages/user/index.wxml-->
+<view class="container">
+  <view class="up"> 
+  <view class="line1">
+  <view class="word">账号ID:</view>
+    <view class="number">{{owhatid}}</view>
+  </view>
+    <view class="line2">
+    <view class="logout" bindtap="logout" >{{log}}</view>
+    <button open-type="getUserInfo"size="mini" type="button" bindgetuserinfo="getuserinfo">授权</button>
+    </view>
+    
+  </view>
+  <view class="middle">  
+    <view class="word">总积分:</view>
+    <view class="number">{{chargemoney}}</view>
+    <image class="refresh" mode="widthFix" bindtap="refresh" src="/icons/Refresh.png"></image>
+  </view>
+  <view class="down">
+    <view class="tip">修改账号ID:</view>
+    
+    <view class="newidcontainer">
+      <input class="input" bindinput="ok"  type="number" placeholder="请输入新账号"></input>
+      <view class="go" bindtap="go" >确定</view>
+    </view>
+
+    
+   
+   <view class="mask" catchtouchmove="preventTouchMove" wx:if="{{showModal1}}"></view>
+    <view class="mask2" catchtouchmove="preventTouchMove" wx:if="{{showModal2}}"></view>
+    <view class="modalDlg" wx:if="{{showModal1}}">
+      <view class="relateidcontainer">
+        <view class="tip2">请设置账号ID</view>
+        <input class="owhatid" placeholder="请输入id" bindinput="ok2" type="number"></input>
+      </view>
+      <view class="gocontainer">
+      <view class="go2" bindtap="go2" >确定</view>
+      <view class="go2" bindtap="go3" >取消</view>
+      </view>
+    </view>
+   
+  </view>
+   
+</view>
